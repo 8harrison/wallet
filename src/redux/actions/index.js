@@ -12,6 +12,6 @@ const receiveCurrencies = (payload) => ({
 export const fetchCurrencies = () => async (dispatch) => {
   const url = 'https://economia.awesomeapi.com.br/json/all';
   const response = await fetch(url);
-  const data = response.json();
+  const data = await response.json();
   dispatch(receiveCurrencies(data));
 };
