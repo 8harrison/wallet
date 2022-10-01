@@ -1,4 +1,3 @@
-import { prototype } from 'mocha';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -40,7 +39,7 @@ class WalletForm extends Component {
 WalletForm.propTypes = {
   dispatch: PropTypes.func.isRequired,
   currencies: PropTypes.shape({
-    map: prototype.func,
+    map: PropTypes.func,
   }).isRequired,
 };
 

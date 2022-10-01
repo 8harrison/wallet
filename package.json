@@ -18,7 +18,10 @@
     "react-scripts": "5.0.1",
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.1",
-    "stylelint-order": "5.0.0"
+    "request": "^2.79.0",
+    "stream": "^0.0.2",
+    "stylelint-order": "5.0.0",
+    "util": "^0.12.4"
   },
   "scripts": {
     "cy": "env CY_CLI=true cypress run",
