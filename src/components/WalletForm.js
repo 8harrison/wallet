@@ -29,7 +29,6 @@ class WalletForm extends Component {
           <option> Transporte</option>
           <option> Saúde</option>
         </select>
-        {console.log(currencies)}
         <select data-testid="currency-input">
           {currencies.map((currency) => <option key={ currency }>{currency}</option>) }
         </select>
