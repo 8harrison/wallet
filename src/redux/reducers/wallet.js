@@ -9,11 +9,12 @@ function walletReducer(state = INITIAL_STATE, action) {
     return {
       ...state,
       currencies: Object.entries(action.payload).filter((cur) => cur[0] !== 'USDT'),
+      current: action.payload,
     };
   case ADD_EXPENSES:
     return {
       ...state,
-      expenses: action.payload,
+      expenses: [...state.expenses, action.payload],
     };
   default:
     return state;
