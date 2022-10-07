@@ -16,7 +16,6 @@ function walletReducer(state = INITIAL_STATE, action) {
       expenses: [...state.expenses, action.payload],
     };
   case DELETE_EXPENSE:
-    console.log(action.payload.expense.id);
     return {
       ...state,
       expenses: [...state.expenses.filter((ex) => ex.id !== action.payload.expense.id)],
