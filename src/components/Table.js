@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { addDespesa, excluiExpense } from '../redux/actions';
+import { excluiExpense } from '../redux/actions';
 
 class Table extends Component {
   exclui = (expense) => {
     const { dispatch } = this.props;
-    dispatch(excluiExpense({expense}));
+    dispatch(excluiExpense({ expense }));
   };
 
   render() {
@@ -65,6 +65,7 @@ class Table extends Component {
 }
 Table.propTypes = {
   expenses: PropTypes.objectOf().isRequired,
+  dispatch: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
