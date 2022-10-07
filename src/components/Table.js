@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { addDespesa, excluiExpense } from '../redux/actions';
 
 class Table extends Component {
   exclui = (expense) => {
-    const { expenses } = this.props;
-    const novoExpenses = expenses.filter((ex) => ex.id !== expense.id);
-    // dispatch(addDespesa(novoExpenses));
-    console.log(novoExpenses);
+    const { dispatch } = this.props;
+    dispatch(excluiExpense({expense}));
   };
 
   render() {

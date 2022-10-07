@@ -2,6 +2,7 @@
 export const ADD_USER_EMAIL = 'ADD_USER_EMAIL';
 export const RECEIVE_CURRENCIES = 'RECEIVE_CURRENCIES';
 export const ADD_EXPENSES = 'ADD_EXPENSES';
+export const DELETE_EXPENSE = 'DELETE_EXPENSE';
 
 export const addEmail = (payload) => ({ type: ADD_USER_EMAIL, payload });
 
@@ -18,3 +19,5 @@ export const fetchCurrencies = () => async (dispatch) => {
 };
 
 export const addDespesa = (payload) => ({ type: ADD_EXPENSES, payload });
+
+export const excluiExpense = (payload) => ({ type: DELETE_EXPENSE, payload });
