@@ -17,8 +17,6 @@ it('botao adc despesa', () => {
 it('adc despesa', async () => {
   const { history } = renderWithRouterAndRedux(<App />, { initialEntries: ['/carteira'] });
   const { location: { pathname } } = history;
-  const value1 = screen.getByTestId('value-input');
-  const description1 = screen.getByTestId('description-input');
   const buttonAdc = screen.getByRole('button', {
     name: /adicionar despesa/i,
   });
